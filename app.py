@@ -21,6 +21,7 @@ def get_new_memes():
         imgs [list]: List of image URLs
     """
     url = 'https://www.memedroid.com/memes/tag/programming'
+          'https://www.memedroid.com/memes/tag/minecraft'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'lxml')
     divs = soup.find_all('div', class_='item-aux-container')
